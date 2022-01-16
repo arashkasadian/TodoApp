@@ -2,24 +2,46 @@ body{
     background-color: grey;
 }
 
-.cbody{
-    margin-top: 200px;
-    width: 50%;
-    margin-left: 25%;
-}
 .clock{
     text-align: center;
-    width: 100%;
-    height: 50vw;
+    width: 50%;
+    margin-left: 25%;
     background-color: gray;
-    border-radius: 50%;
-    box-shadow: rgb(138, 138, 138) -5px -5px 5px,rgb(117, 117, 117) 5px 5px 5px;
+    border-radius: 15px;
+    box-shadow: rgb(138, 138, 138) -5px -5px 5px
+    ,rgb(117, 117, 117) 5px 5px 5px;
+    /* ,inset rgb(138, 138, 138) -5px -5px 5px
+    ,inset rgb(117, 117, 117) 5px 5px 5px; */
 }
-.ourtext{
-    position: relative;
-    top: 45%;
+.ourText{
+    padding: 15px;
     font-size: 5.5vw;
     font-family: cursive;
     color: #545454;
     font-weight: bold;
+}
+.btns{
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+}
+.btns :not(:last-child){
+    margin-right: 5%;
+}
+.btns button{
+    padding: 8px;
+    font-size: 2.5vw;
+    font-family: cursive;
+    color: #545454;
+    font-weight: bold;
+    background-color: gray;
+    border-radius: 15px;
+    box-shadow: rgb(138, 138, 138) -5px -5px 5px
+    ,rgb(117, 117, 117) 5px 5px 5px;
+    border: none;
+    text-transform: uppercase;
+}
+.btns button:active{
+    box-shadow:inset rgb(138, 138, 138) -5px -5px 5px
+    ,inset rgb(117, 117, 117) 5px 5px 5px;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import BtnLap from './lap';
+import MyList from './MyList';
 
 var interval;
 class MyTimer extends React.Component{
@@ -51,17 +50,39 @@ class MyTimer extends React.Component{
         time : this.state.time
         })
     }
+    
+    reset=()=>{
+      var h=0;
+      var m=0;
+      var s=0;
+      clearInterval(interval);
+      this.setState ({
+        h:h,
+        m:m,
+        s:s,
+        isset:false,
+        time : `${h>9 ?h :'0'+h} : ${m>9 ?m :'0'+m} : ${s>9 ?s :'0'+s}`
+        })
+    }
+
+    handle=()=>{
+      this.props.setlist([...this.props.list,this.state.time]);
+    }
+
     render(){
       return(
         <>
-            <div className='clock'>
+            <div className='clock' onClick={this.handle}>
               <p className='ourText'>{this.state.time}</p>
             </div>
             <div className='btns'>
               <button onClick={this.startWatch}>start</button>
               <button onClick={this.stopWatch}>stop</button>
-              <BtnLap/>
+              <button onClick={this.reset}>reset</button>
             </div>
+            <MyList>
+                {this.props.list}
+            </MyList>
         </>
       )}
   }

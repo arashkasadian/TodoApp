@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MyTimer from './Timer';
+import App from './App';
+
 
 class FirstClass extends React.Component {
+
+
   render(){
       return(
         <>
-              <MyTimer/>              
+          <App/>              
         </>
       )
   }

@@ -45,3 +45,10 @@ body{
     box-shadow:inset rgb(138, 138, 138) -5px -5px 5px
     ,inset rgb(117, 117, 117) 5px 5px 5px;
 }
+.laplist{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5vw;
+    font-family: cursive;
+    color: #262626;
+}

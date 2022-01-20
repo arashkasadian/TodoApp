@@ -1,6 +1,8 @@
 import React from 'react';
 import './index.css';
-import MyList from './MyList';
+import { myContext } from './mycontex';
+
+
 
 var interval;
 class MyTimer extends React.Component{
@@ -14,6 +16,8 @@ class MyTimer extends React.Component{
         time : '00 : 00 : 00'
       }
     }
+
+    static contextType=myContext;
 
     startWatch=()=> {
       if (this.state.isset===false) { 
@@ -63,11 +67,12 @@ class MyTimer extends React.Component{
         isset:false,
         time : `${h>9 ?h :'0'+h} : ${m>9 ?m :'0'+m} : ${s>9 ?s :'0'+s}`
         })
-        this.props.setlist([''])
+        this.context.setlist([''])
+       
     }
 
     handle=()=>{
-      this.props.setlist([...this.props.list,this.state.time]);
+      this.context.setlist([...this.context.list,this.state.time]);
     }
 
     render(){
@@ -81,9 +86,7 @@ class MyTimer extends React.Component{
               <button onClick={this.stopWatch}>stop</button>
               <button onClick={this.reset}>reset</button>
             </div>
-            <MyList>
-                {this.props.list}
-            </MyList>
+
         </>
       )}
   }

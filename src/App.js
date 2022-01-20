@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import { myContext } from './mycontex';
+import MyList from './MyList';
 import MyTimer from './Timer';
 
 const App=()=> {
@@ -6,13 +8,17 @@ const App=()=> {
 
 
     return(
-        <div>
-            <MyTimer
-             list={list}
-             setlist={setlist}
-             />
-
-        </div>
+        <>
+        <myContext.Provider value={
+            {
+                list,
+                setlist
+            }
+        }>
+            <MyTimer />
+            <MyList />
+        </myContext.Provider>
+        </>
     )
 }
 

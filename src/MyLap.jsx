@@ -1,7 +1,13 @@
+import { useContext } from "react"
+import { myContext } from "./mycontex";
+
 const MyLap=(props)=>{
-    console.log(props);
+    const context=useContext(myContext);
+    const deleteList=(e)=>{
+        context.setlist(context.list.filter(t => t !== e.target.innerHTML))
+    }
     return(
-        <p>
+        <p onClick={deleteList}>
             {props.children}
         </p>
     )

@@ -1,54 +1,107 @@
-body{
-    background-color: grey;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.MyCard{
+    width: 50%;
+    min-height: 60vw;
+    margin: 10% 0% 10% 25%;
+    box-shadow: 0px 0px 20px 0px #e6e6fa;
+    border-radius: 20px;
+    padding: 30px
+}
+.Title{
+    color: #7d7de1;
+    font-size: 3.5vw;
+}
+.MyForm{
+    width: 100%;
+    margin-top: 4vw;
+    text-align: center;
+}
+.MyInput{
+    border: none;
+    width: 80%;
+    margin-right: 5%;
+    padding: 1vw;
+    font-size: 2vw;
+    border-radius: 1vw;
+    background-color: rgb(125 125 225 / 19%);
+    color: #808080;
+    /* transition: 0.5s; */
+}
+.MyInput:focus {
+    border: none;
+    outline: 1px solid #7d7de1;
+    background-color: rgb(125 125 225);
+    color: white;
+    width: 85%;
+    transition: 0.5s;
+}
+.MyInput::placeholder {
+    text-align: center;
+    color: #ffffff;
+}
+.AddBtn{
+    border: none;
+    width: 10%;
+    padding: 1vw;
+    background-color: #7d7de1;
+    color: white;
+    border-radius: 1vw;
+    font-size: 2vw;
+}
+.AddBtn:active{
+    background-color: #5b5bd8;
+}
+.ToDo{
+    width: 100%;
+    margin-top: 4vw;
+    box-shadow: 0px 0px 5px 0px #e6e6fa;
+    border-radius: 1vw;
+    background-color: #7d7de1;
 }
 
-.clock{
+.JobTitle{
+    width: 80%;
+    padding: 8%;
+    display: inline-block;
+    color: white;
+    font-size: 3vw;
+}
+.ToDo-DeActive{
+    width: 100%;
+    margin-top: 4vw;
+    border-radius: 1vw;
+    background-color: #2cb5b5;
+}
+
+.JobTitle-DeActive{
+    width: 80%;
+    padding: 8%;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 3vw;
+}
+.JobTitle:hover,.JobTitle-DeActive:hover{
+    color: #cccccc;
+}
+.fa-trash{
+    padding: 8%;
+    display: inline-block;
+    text-align: right;
+    color: white;   
+    font-size: 2vw;
+}
+
+.fa-trash:hover{
+    color: #ed3636;
+}
+.NoJob{
     text-align: center;
-    width: 50%;
-    margin-left: 25%;
-    background-color: gray;
-    border-radius: 15px;
-    box-shadow: rgb(138, 138, 138) -5px -5px 5px
-    ,rgb(117, 117, 117) 5px 5px 5px;
-    /* ,inset rgb(138, 138, 138) -5px -5px 5px
-    ,inset rgb(117, 117, 117) 5px 5px 5px; */
-}
-.ourText{
-    padding: 15px;
-    font-size: 5.5vw;
-    font-family: cursive;
-    color: #545454;
-    font-weight: bold;
-}
-.btns{
-    width: 50%;
-    margin-left: 25%;
-    text-align: center;
-}
-.btns :not(:last-child){
-    margin-right: 5%;
-}
-.btns button{
-    padding: 8px;
-    font-size: 2.5vw;
-    font-family: cursive;
-    color: #545454;
-    font-weight: bold;
-    background-color: gray;
-    border-radius: 15px;
-    box-shadow: rgb(138, 138, 138) -5px -5px 5px
-    ,rgb(117, 117, 117) 5px 5px 5px;
-    border: none;
-    text-transform: uppercase;
-}
-.btns button:active{
-    box-shadow:inset rgb(138, 138, 138) -5px -5px 5px
-    ,inset rgb(117, 117, 117) 5px 5px 5px;
-}
-.laplist{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2.5vw;
-    font-family: cursive;
-    color: #262626;
+    padding: 15vw 0;
+    color: #80808056;
+    font-size: 2vw;
 }
